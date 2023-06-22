@@ -1,10 +1,5 @@
 import { Request, Response, NextFunction, Router } from "express";
-import {
-  home_get,
-  login_post,
-  encrypt_get,
-  decrypt_get,
-} from "../controllers/middleware";
+import * as Middleware from "../controllers/middleware";
 
 const router = Router();
 
@@ -26,9 +21,9 @@ const checkAccessToken = (req: Request, res: Response, next: NextFunction) => {
 };
 
 router
-  .get("/", checkAccessToken, home_get)
-  .get("/encrypt/:str", encrypt_get)
-  .get("/decrypt/:str", decrypt_get)
-  .post("/login/student", login_post);
+  .get("/", checkAccessToken, Middleware.home)
+  .get("/encrypt/:str", Middleware.encryptGet)
+  .get("/decrypt/:str", Middleware.decryptGet)
+  .post("/login/student", Middleware.login);
 
 export default router;
