@@ -11,6 +11,8 @@ export const login = async (req: Request, res: Response) => {
     .then((r) => (r ? true : false))
     .catch((e) => false);
 
+  console.log(user);
+
   res.setHeader("Authorization", `Bearer ${token}`);
   res.status(200).json({ token: token });
 };

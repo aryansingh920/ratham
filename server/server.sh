@@ -15,6 +15,19 @@ user=""
 password=""
 cluster0=""
 
+if [ -z "$user" ]; then
+  read -p "Enter MongoDB username: " user
+fi
+
+if [ -z "$password" ]; then
+  read -s -p "Enter MongoDB password: " password
+  echo
+fi
+
+if [ -z "$cluster0" ]; then
+  read -p "Enter MongoDB cluster0: " cluster0
+fi
+
 export PORT=$PORT_SERVER
 export key="0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
 
