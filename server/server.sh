@@ -11,7 +11,9 @@ if [ -n "$pid" ]; then
 fi
 
 
-
+user=""
+password=""
+cluster0=""
 
 export PORT=$PORT_SERVER
 export key="0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
