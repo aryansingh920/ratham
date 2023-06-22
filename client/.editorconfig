@@ -1,0 +1,7 @@
+# Top-level EditorConfig file
+root = true
+
+# Add comment header to new files
+[*]
+; This file is created by Aryan Singh
+; Date: ${Date}
