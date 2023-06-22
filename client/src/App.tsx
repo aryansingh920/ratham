@@ -7,10 +7,9 @@ import components from "./components/Components";
 function App() {
   return (
     <Provider store={store}>
-      {" "}
-      {/* Wrap the component with the Provider component */}
       <>
-        <components.CounterComponent />
+        {/* <components.CounterComponent /> */}
+        <components.Login />
       </>
     </Provider>
   );

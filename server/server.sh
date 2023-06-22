@@ -14,4 +14,4 @@ fi
 export PORT=$PORT_SERVER
 
 npm install
-npm start
+npm run dev

@@ -7,13 +7,13 @@ export PORT_CLIENT=3001
 export PORT_SERVER=3002
 
 # Command to run run.sh in a new terminal for the client
-osascript -e "tell application \"Terminal\" to do script \"cd $current_dir/client/ && bash run.sh\""
+osascript -e "tell application \"Terminal\" to do script \"cd $current_dir/client/ && bash client.sh\""
 
 # Delay for 2 seconds
 sleep 2
 
 # Command to run run.sh in a new terminal for the server
-osascript -e "tell application \"Terminal\" to do script \"cd $current_dir/server/ && bash run.sh\""
+osascript -e "tell application \"Terminal\" to do script \"cd $current_dir/server/ && bash server.sh\""
 
 
 cleanup() {
