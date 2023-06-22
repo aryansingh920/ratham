@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { Interface } from "../Interface/interface";
-import hash from "../functions/crypto";
+import { hash } from "../functions/crypto";
 
 export const login = async (req: Request, res: Response) => {
   const { universityId, password }: Interface = req.body;

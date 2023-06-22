@@ -1,9 +1,9 @@
 import { home } from "../middleware/home";
 import { login } from "../middleware/login";
-import { encrypt } from "../middleware/encrypt";
-import { decrypt } from "../middleware/decrypt";
+import { encryptGet } from "../middleware/encryptStr";
+import { decryptGet } from "../middleware/decryptStr";
 
 export const home_get = home;
 export const login_post = login;
-export const encrypt_get = encrypt;
-export const decrypt_get = decrypt;
+export const encrypt_get = encryptGet;
+export const decrypt_get = decryptGet;
