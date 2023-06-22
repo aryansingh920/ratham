@@ -2,10 +2,7 @@ import { Request, Response } from "express";
 import crypto from "crypto";
 
 const algorithm = "aes-256-cbc";
-const key = Buffer.from(
-  "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
-  "hex"
-);
+const key = Buffer.from(process.env.key, "hex");
 
 function decryptString_AES(encrypted: string): string {
   const iv = Buffer.from(encrypted.slice(0, 32), "hex"); // Extract IV from the encrypted value

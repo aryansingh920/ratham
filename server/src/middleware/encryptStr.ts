@@ -2,10 +2,7 @@ import { Request, Response } from "express";
 import crypto from "crypto";
 
 const algorithm = "aes-256-cbc";
-const key = Buffer.from(
-  "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
-  "hex"
-);
+const key = Buffer.from(process.env.key, "hex");
 function encryptString_AES(input: string): string {
   const iv = crypto.randomBytes(16); // Generate a random IV (Initialization Vector)
   const cipher = crypto.createCipheriv(algorithm, key, iv);

@@ -5,7 +5,6 @@ import {
   encrypt_get,
   decrypt_get,
 } from "../controllers/middleware";
-// import redisClient from "../cache/redisConfig";
 
 const router = Router();
 
@@ -16,10 +15,10 @@ const checkAccessToken = (req: Request, res: Response, next: NextFunction) => {
     return res.status(401).json({ error: "Access token missing" });
   }
 
-  const universityId: String = accessToken.split(" ")[1];
+  const token: String = accessToken.split(" ")[1];
   const BearerString: String = accessToken.split(" ")[0];
 
-  if (BearerString === "Bearer" && universityId) {
+  if (BearerString === "Bearer") {
     next();
   } else {
     return res.status(401).json({ error: "Invalid access token" });

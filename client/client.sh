@@ -13,6 +13,7 @@ if [ -n "$pid" ]; then
   kill $pid
 fi
 
+export BASE_URL="http://localhost:$PORT_SERVER"
 
 # Install dependencies
 npm install

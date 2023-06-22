@@ -12,7 +12,7 @@ fi
 
 
 export PORT=$PORT_SERVER
-export key=g3noi4gio3refcniov990rgoigr9w9wgrfw9oo
+export key="0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
 
 npm install
 npm run dev
