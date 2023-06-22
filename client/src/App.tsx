@@ -2,7 +2,7 @@ import React from "react";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import "./App.css";
-import components from "./components/Components";
+import Comp from "./components/Components";
 import axios from "axios";
 
 import homeAPI from "./service/home";
@@ -18,7 +18,8 @@ function App() {
   return (
     <Provider store={store}>
       <div className="app-container mt-5">
-        <components.Login />
+        <Comp.Login />
+        <Comp.Chat />
       </div>
     </Provider>
   );
