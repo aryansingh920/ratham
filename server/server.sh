@@ -11,8 +11,13 @@ if [ -n "$pid" ]; then
 fi
 
 
+
+
 export PORT=$PORT_SERVER
 export key="0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+
+export MONGODB_URI="mongodb+srv://${user}:${password}@cluster0.${cluster0}.mongodb.net/?retryWrites=true&w=majority"
+
 
 npm install
 npm run dev
